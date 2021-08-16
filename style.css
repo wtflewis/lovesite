@@ -1,0 +1,392 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: gray;
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button */
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+	background: pink;
+	color: #333;
+	font: 100% Lato, Arial, Sans Serif;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+#background-wrap {
+    bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-moz-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-webkit-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-moz-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+    -webkit-animation: animateBubble 25s linear infinite, sideWays 0s ease-in-out infinite alternate;
+-moz-animation: animateBubble 25s linear infinite, sideWays 0s ease-in-out infinite alternate;
+animation: animateBubble 25s linear infinite, sideWays 0s ease-in-out infinite alternate;
+left: -5%;
+top: 5%;
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x2 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 0s ease-in-out infinite alternate;
+-moz-animation: animateBubble 20s linear infinite, sideWays 0s ease-in-out infinite alternate;
+animation: animateBubble 20s linear infinite, sideWays 0s ease-in-out infinite alternate;
+left: 5%;
+top: 80%;
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x3 {
+    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 10%;
+top: 40%;
+-webkit-transform: scale(0.7);
+-moz-transform: scale(0.7);
+transform: scale(0.7);
+}
+
+.x4 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+left: 20%;
+top: 0;
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x5 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 30%;
+top: 50%;
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+.x6 {
+    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 50%;
+top: 0;
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+
+.x7 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 65%;
+top: 70%;
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x8 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+left: 80%;
+top: 10%;
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x9 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 90%;
+top: 50%;
+-webkit-transform: scale(0.6);
+-moz-transform: scale(0.6);
+transform: scale(0.6);
+}
+
+.x10 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 80%;
+top: 80%;
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+
+.x11 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 90%;
+top: 20%;
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x12 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 40%;
+top: 10%;
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+
+.x13 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 80%;
+top:60%;
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+/* OBJECTS */
+
+.bubble {
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	
+    height: 200px;
+	position: absolute;
+	width: 200px;
+}
+
+.bubble:after {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	
+	content: "";
+    height: 180px;
+	left: 10px;
+	position: absolute;
+	width: 180px;
+}
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+.kutu{
+position: relative;
+margin:auto;
+margin-top:100px;
+width: 370px;
+      height:350px;
+      background-color:#ffffff;
+-moz-border-radius:12px;
+ -webkit-border-radius: 13px;
+  box-shadow: 10px 10px 8px #a8a8a8;
+
+}
+
+img1 {
+position: absolute;
+margin:auto;
+margin-left:455px;
+margin-top:-388px;
+}
